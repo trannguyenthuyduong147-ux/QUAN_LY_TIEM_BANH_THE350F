@@ -32,6 +32,7 @@ Kết nối Zalo OA/FB Page API
 Nhận tin, auto-reply
 Hồ trợ đăng bài, cập nhật thông tin share, like, comment trên facebook
 Phân tích hiệu quả kênh, phân hệ quyền riêng tư & tuân thủ (consent, logs)
+
 👥 Phát triển bởi Nhóm 3 con Cá Mòi
 
 Trần Nguyễn Thùy Dương ( trưởng nhóm )- N23DCPT073
