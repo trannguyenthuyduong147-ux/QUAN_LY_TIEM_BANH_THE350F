@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê doanh số – Admin</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./thongke.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../assets/LOGO.png">
+            <h2>Quản Trị Viên</h2>
+            <p id="adminName" class="admin-name"></p> 
+        </div>
+
+        <nav>
+            <a href="./quanlysanpham.html"><i class="fa-solid fa-box"></i> Quản lý sản phẩm</a>
+            <a href="./donhang.html"><i class="fa-solid fa-cart-shopping"></i> Đơn hàng</a>
+            <a href="./thongke.html" class="active"><i class="fa-solid fa-chart-line"></i> Thống kê doanh số</a>
+            <a href="./dangbai.html"><i class="fa-solid fa-share-from-square"></i> Bài đăng Facebook</a>
+            <a href="./tuongtac.html"><i class="fa-solid fa-thumbs-up"></i> Thống kê Facebook</a>
+
+            <a id="btnLogout" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+        </nav>
+    </aside>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main class="main">
+
+        <h1 class="title">Báo cáo doanh số</h1>
+
+        <!-- ====== BOX CHỈ SỐ ====== -->
+        <div class="stats-grid">
+
+            <div class="stat-box">
+                <h3>Tổng doanh thu</h3>
+                <p id="tongDoanhThu">0 VND</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>Tổng số đơn</h3>
+                <p id="tongDon">0</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>Đơn đã thanh toán</h3>
+                <p id="donDaThanhToan">0</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>Đơn chưa thanh toán</h3>
+                <p id="donChuaThanhToan">0</p>
+            </div>
+
+        </div>
+
+        <!-- ====== BIỂU ĐỒ DOANH THU ====== -->
+        <div class="chart-container">
+            <canvas id="revenueChart"></canvas>
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script type="module" src="../backend/thongke.js"></script>
+    <script type="module" src="../backend/hienthi_admin.js"></script>
+    <script type="module" src="../backend/admin_dangxuat.js"></script>
+
+</body>
+</html>

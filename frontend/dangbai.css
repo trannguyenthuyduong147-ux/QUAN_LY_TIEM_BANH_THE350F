@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Bricolage Grotesque", sans-serif;
+    display: flex;
+    background: #f8f9fa;
+
+    height: 100vh;        /* ⭐ full màn hình */
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #1f2937;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto; 
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #d1d5db;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+    background: #374151;
+    color: white;
+}
+
+/* Main content */
+.main {
+    flex: 1;
+    padding: 30px;
+    margin-left: 250px;  /* ⭐ chừa chỗ sidebar */
+    height: 100vh;       /* ⭐ full chiều cao */
+    overflow-y: auto; 
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Định dạng khung đăng bài */
+.post-box {
+    background: white;
+    max-width: 700px;          /* Giới hạn chiều ngang */
+    margin: 0 auto;            /* Căn giữa hoàn toàn */
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    text-align: center;
+    
+}
+
+.post-box label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Ô nhập nội dung */
+#postContent {
+    /* width: 100%;
+    height: 160px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    resize: vertical;
+    font-family: inherit; */
+
+
+      width: 100%;
+    min-height: 120px;
+    max-height: 400px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.45;
+    resize: none; /* để không kéo thủ công, giống Facebook */
+    overflow-y: hidden; /* không hiện scrollbar */
+}
+
+/* Input upload file */
+#postImage {
+    width: 100%;
+    padding: 10px;
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+.btn-primary i {
+    margin-right: 8px;
+}
+
+.btn-primary:hover {
+    background: #1e4fcf;
+}
+
+/* Status message */
+#statusMessage {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.logout {
+    color: red !important;
+    cursor: pointer;
+}
+.logout:hover {
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+

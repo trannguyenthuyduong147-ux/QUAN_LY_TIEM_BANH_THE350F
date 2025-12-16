@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng bài Facebook – Admin</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./dangbai.css">
+</head>
+
+<body>
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../assets/LOGO.png">
+            <h2>Quản Trị Viên</h2>
+            <p id="adminName" class="admin-name"></p> 
+        </div>
+
+        <nav>
+            <a href="./quanlysanpham.html"><i class="fa-solid fa-box"></i> Quản lý sản phẩm</a>
+            <a href="./donhang.html"><i class="fa-solid fa-cart-shopping"></i> Đơn hàng</a>
+            <a href="./thongke.html"><i class="fa-solid fa-chart-line"></i> Thống kê doanh số</a>
+            <a href="./dangbai.html" class="active"><i class="fa-solid fa-share-from-square"></i> Bài đăng Facebook</a>
+            <a href="./tuongtac.html"><i class="fa-solid fa-thumbs-up"></i> Thống kê Facebook</a>
+
+            <a id="btnLogout" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+        </nav>
+    </aside>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main class="main">
+
+        <h1 class="title">Đăng bài lên Facebook</h1>
+
+        <div class="post-box">
+
+            <label>Nội dung bài viết</label>
+            <textarea id="postContent" placeholder="Nhập nội dung bài viết..."></textarea>
+
+            <label>Đính kèm hình ảnh (tùy chọn)</label>
+            <input type="file" id="postImage" accept="image/*">
+
+            <button id="btnPostToFacebook" class="btn-primary">
+                <i class="fa-brands fa-facebook"></i> Đăng lên Facebook
+            </button>
+
+            <p id="statusMessage"></p>
+        </div>
+
+    </main>
+
+    <!-- JS xử lý đăng bài -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script type="module" src="../backend/dangbai.js"></script>
+    <script type="module" src="../backend/hienthi_admin.js"></script>
+    <script type="module" src="../backend/admin_dangxuat.js"></script>
+
+
+</body>
+</html>

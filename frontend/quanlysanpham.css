@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Bricolage Grotesque", sans-serif;
+    display: flex;
+    background: #f8f9fa;
+
+    height: 100vh;        /* ⭐ full màn hình */
+    overflow: hidden; 
+}
+
+/* Sidebar giữ nguyên style cũ */
+.sidebar {
+    width: 250px;
+    background: #1f2937;
+    color: white;
+    padding: 20px;
+
+    
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto; 
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    color: #d1d5db;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+    background: #374151;
+    color: white;
+}
+
+.logout {
+    color: #f87171 !important;
+    cursor: pointer;
+}
+
+/* Main */
+.main {
+    flex: 1;
+    padding: 30px;
+    margin-left: 250px;  /* ⭐ chừa chỗ sidebar */
+    height: 100vh;       /* ⭐ full chiều cao */
+    overflow-y: auto;  
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Table */
+.product-table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-table th,
+.product-table td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.product-table th {
+    background: #f1f5f9;
+}
+
+.product-table img {
+    width: 60px;
+    border-radius: 8px;
+}
+
+.btn-delete {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    opacity: 0.85;
+}
+
+
+
+
+.status.active {
+    color: green;
+    font-weight: 600;
+}
+
+.status.inactive {
+    color: red;
+    font-weight: 600;
+}
+
+.btn-hide {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-show {
+    background: #22c55e;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+.btn-add {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+/* ===== MODAL OVERLAY ===== */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    
+}
+
+/* Ẩn modal */
+.hidden {
+    display: none;
+}
+
+/* ===== MODAL CONTENT ===== */
+.modal-content {
+    background: #ffffff;
+    width: 420px;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    animation: fadeInScale 0.25s ease;
+    box-sizing: border-box; /* ⭐ FIX LỆCH */
+}
+
+
+/* Title */
+.modal-content h2 {
+    margin-bottom: 22px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+}
+
+/* ===== INPUT ===== */
+.modal-content input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.modal-content input:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ===== ACTION BUTTONS ===== */
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.modal-actions button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.25s;
+}
+
+/* Save */
+#btnSaveProduct {
+    background: #2563eb;
+    color: white;
+}
+
+#btnSaveProduct:hover {
+    background: #1e40af;
+}
+
+/* Cancel */
+#btnCloseModal {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+#btnCloseModal:hover {
+    background: #d1d5db;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+

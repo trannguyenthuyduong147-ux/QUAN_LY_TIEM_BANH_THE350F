@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch sử đơn đã mua</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./lichsu.css">
+
+</head>
+<body>
+
+    <header class="navbar">
+
+    <div class="nav-left">
+      <!-- <a href="./GioiThieu.html">Giới thiệu <i class="fa-solid fa-chevron-down"></i></a> -->
+      <a href="../frontend/SanPham.html" >Sản phẩm</a>
+      <a href="../frontend/chinhsach.html">Chính Sách</a>
+      <a href="../frontend/lichsu.html" id="btnPurchaseHistory" class="active">Lịch sử mua hàng</a>
+    </div>
+
+
+    <div class="nav-center">
+    <a href="../trangchu.html">
+     <img src="../assets/LOGO.png" alt="The 350F Logo">
+     </a>
+    </div>
+
+
+
+    <div class="nav-right">
+      <a href="../frontend/LienHe.html">Liên hệ</a>
+      <a href="./giohang.html"><img src="../assets/add-to-cart.png" alt="🧺" width="30" height="30"></a>
+      <a href="#" id="search"><img src="../assets/search.png" alt="🔍" width="30" height="30"></a>
+     <div class="user-login" id="userLogin">
+        <img src="../assets/user.png" alt="User" width="24">
+        <span id="userNameLinks">
+            <a href="../frontend/sanpham.html">Đăng Nhập</a> /
+           <a href="../frontend/DangKy.html">Đăng Ký</a>
+         </span>
+     </div>
+    </div>
+
+
+    <div id="search-overlay">
+      <span id="close-search">✖</span>
+      <input type="text" id="search-input" placeholder="Tìm sản phẩm...">
+      <div id="search-results"></div>
+    </div>
+
+  </header>
+
+<h1>🧾 Lịch sử đơn hàng của bạn</h1>
+
+<table class="history-table">
+    <thead>
+    <tr>
+        <th>Mã đơn</th>
+        <th>Ngày thanh toán</th>
+        <th>Số tiền</th>
+        <th>Phương thức</th>
+        <th>Trạng thái</th>
+    </tr>
+    </thead>
+    <tbody id="historyBody"></tbody>
+</table>
+
+<p id="emptyMessage" class="empty" style="display:none;">
+    Bạn chưa có đơn hàng nào.
+</p>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script type="module" src="../backend/lichsu.js"></script>
+
+  <script type="module" src="../backend/supabase.js"></script>
+  <script src="../backend/hienthinguoidung.js"></script>
+  <script type="module" src="../backend/dangxuat.js"></script>
+  <script type="module" src="../backend/timkiem.js"></script>
+  <script type="module" src="../backend/lienhe.js"></script>
+
+</body>
+</html>

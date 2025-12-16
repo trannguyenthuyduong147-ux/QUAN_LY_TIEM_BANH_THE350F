@@ -1,0 +1,41 @@
+
+body {
+    font-family: "Bricolage Grotesque", sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.history-table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.history-table th,
+.history-table td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.history-table th {
+    background: #f1f5f9;
+}
+
+.status {
+    font-weight: 600;
+    color: green;
+}
+
+.empty {
+    text-align: center;
+    margin-top: 40px;
+    color: #6b7280;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý đơn hàng – Admin</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./donhang.css">
+</head>
+
+<body>
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="../assets/LOGO.png">
+            <h2>Quản Trị Viên</h2>
+            <p id="adminName" class="admin-name"></p> 
+        </div>
+
+        <nav>
+            <a href="./quanlysanpham.html" ><i class="fa-solid fa-box"></i> Quản lý sản phẩm</a>
+            <a href="./donhang.html" class="active"><i class="fa-solid fa-cart-shopping"></i> Đơn hàng</a>
+            <a href="./thongke.html" ><i class="fa-solid fa-chart-line"></i> Thống kê doanh số</a>
+            <a href="./dangbai.html" ><i class="fa-solid fa-share-from-square"></i> Bài đăng Facebook</a>
+            <a href="./tuongtac.html"><i class="fa-solid fa-thumbs-up"></i> Thống kê Facebook</a>
+
+            <a id="btnLogout" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+        </nav>
+    </aside>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main class="main">
+        <h1 class="title">Danh sách đơn hàng</h1>
+
+        <!-- Bảng đơn hàng -->
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>Mã đơn</th>
+                    <th>Khách hàng</th>
+                    <th>SĐT</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                    <th>Ngày đặt</th>
+                    <th>Chi tiết</th>
+                </tr>
+            </thead>
+            <tbody id="ordersBody"></tbody>
+        </table>
+    </main>
+
+    <!-- ===================== POPUP CHI TIẾT ĐƠN ===================== -->
+    <div id="orderDetailOverlay" class="overlay hidden">
+        <div class="detail-box">
+            <h2>Chi tiết đơn hàng</h2>
+            <div id="orderDetailContent"></div>
+            <button id="btnCloseDetail">Đóng</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script type="module" src="../backend/donhang.js"></script>
+    <script type="module" src="../backend/hienthi_admin.js"></script>
+    <script type="module" src="../backend/admin_dangxuat.js"></script>
+
+</body>
+</html>
